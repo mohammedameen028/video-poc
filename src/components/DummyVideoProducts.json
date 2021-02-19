@@ -1,0 +1,17 @@
+{
+	"headers":[
+	  "name",
+	  "quantity",
+	  "price",
+	  "storesavailable"
+	],
+	"items":{
+	  "1":{"name":"Cakeboard","quantity":"1","price":"20", "storesavailable":["walmart", "target","amazon"]},
+	  "2":{"name":"Saucepan","quantity":"1","price":"5", "storesavailable":["walmart", "target","amazon"]},
+	  "3":{"name":"Electricmixer","quantity":"1","price":"5", "storesavailable":["walmart", "target","amazon"]},
+	  "4":{"name":"Parchmentpaper","quantity":"1","price":"5", "storesavailable":["walmart", "target","amazon"]}
+
+
+	},
+	"total":35
+  }

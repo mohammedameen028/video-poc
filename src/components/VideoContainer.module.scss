@@ -1,0 +1,8 @@
+.video-main{
+	display: flex;
+	flex-direction: row;
+	.video-container{
+		flex-basis: 100%;
+		margin-left:15px;
+	}
+}
