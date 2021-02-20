@@ -8,6 +8,11 @@ import LargeBowls from "./cartimage/large-bowls-new.png";
 import BakingScooper from "./cartimage/measuring-cups-new.png";
 import Potatao from "./cartimage/potato-masher-new.png";
 import MuffinPan from "./cartimage/muffin-pan-new.png";
+import {FaShareSquare} from 'react-icons/fa'
+import {AiOutlineLike} from 'react-icons/ai'
+
+
+
 
 import Modal from "./Modal";
 import Button from "react-bootstrap/Button";
@@ -81,48 +86,101 @@ class ShopingCart extends React.PureComponent {
               <span style={{ marginLeft: "20px" }} onClick={this.handleClose}>
                 &#10006;
               </span>
+              <span >
+              <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+              </span>
             </div>
             <div className={styles["cart-item"]}>
               <div id="item1" className={styles["item1"]}>
+                <div>
                 <img
                   src={coolingwire}
                   alt="fireSpot"
                   width="145"
                   height="130"
                 />
+                </div>
+                <div>
+                <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
+
+                </div>
               </div>
               <div id="item2" className={styles["item2"]}>
+                <div>
                 <img
                   src={cupcakeliners}
                   alt="fireSpot"
                   width="145"
                   height="130"
                 />
+                </div>
+               <div>
+                <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
+
+                </div>
               </div>
               <div id="item3" className={styles["item3"]}>
+                <div>
                 <img
                   src={MeasuringCup}
                   alt="fireSpot"
                   width="145"
                   height="130"
                 />
+                </div>
+                <div>
+                <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
+
+                </div>
+                
               </div>
               <div id="item4" className={styles["item4"]}>
+                <div>
                 <img src={LargeBowls} alt="fireSpot" width="145" height="130" />
+                </div>
+                <div>
+                <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
+                </div>
               </div>
               <div id="item5" className={styles["item5"]}>
+                <div>
                 <img src={Potatao} alt="fireSpot" width="145" height="130" />
+                </div>
+                <div>
+                <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
+                </div>
               </div>
               <div id="item6" className={styles["item6"]}>
+                <div>
+             
                 <img
                   src={BakingScooper}
                   alt="fireSpot"
                   width="145"
                   height="130"
                 />
+                   </div>
+                   <div>
+                   <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
+
+                   </div>
               </div>
               <div id="item7" className={styles["item7"]}>
+                <div>
+
+            
                 <img src={MuffinPan} alt="fireSpot" width="145" height="130" />
+                </div>
+                <div>
+                <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
+                </div>
               </div>
             </div>
             <Modal show={this.state.show} handleClose={this.hideModal}>

@@ -9,7 +9,7 @@
 		box-shadow: 0 -1px 12px rgba(0,0,0,.25), 0 4px 4px rgba(0,0,0,.25);
 		border-radius: 10px;
 		//justify-content: center;
-		background-color: #f2f2f2;
+		background-color: #E0E0E0;
 		margin: 5px 5px;
 		padding: 2px;
 		box-sizing: border-box;
@@ -33,6 +33,12 @@
 			text-align: center;
 			justify-content: center;
 			color: #fff;
+
+			.icon1{
+				color:white;
+				margin-left:200px;
+				
+			}
 		}
 
 		.cart-footer{
@@ -59,7 +65,7 @@
 
 			.button1{
 
-			height: 70%;
+			height: 90%;
 			width:15%;
 			position: relative;
 			///margin-left:85%;
@@ -81,7 +87,7 @@
 
 			}
 			.button2{
-			height: 70%;
+			height: 90%;
 			width:15%;
 			position: relative;
 			///margin-left:85%;
@@ -113,37 +119,87 @@
 	display:none;
 	margin-top:5px;
 	margin-left:5px;
+	
+	.icon1{
+		color:blue;
+		margin-right:20px;
+	}
+	.icon2{
+		color:#cc0000;
+	}
 }
 .item2{
 	display:none;
 	margin-top:5px;
 	margin-left:5px;
+	.icon1{
+		color:blue;
+		margin-right:20px;
+	}
+	.icon2{
+		color:#cc0000;
+	}
 }
 .item3{
 	display:none;
 	margin-top:5px;
 	margin-left:5px;
+	.icon1{
+		color:blue;
+		margin-right:20px;
+	}
+	.icon2{
+		color:#cc0000;
+	}
 }
 .item4{
 	display:none;
 	margin-top:5px;
 	margin-left:5px;
+	.icon1{
+		color:blue;
+		margin-right:20px;
+	}
+	.icon2{
+		color:#cc0000;
+	}
 }
 .item5{
 	display:none;
 	margin-top:5px;
 	margin-left:5px;
+	.icon1{
+		color:blue;
+		margin-right:20px;
+	}
+	.icon2{
+		color:#cc0000;
+	}
 }
 .item6{
 	display:none;
 	margin-top:5px;
 	margin-left:5px;
+	.icon1{
+		color:blue;
+		margin-right:20px;
+	}
+	.icon2{
+		color:#cc0000;
+	}
 }
 
 .item7{
 	display:none;
 	margin-top:5px;
 	margin-left:5px;
+	.icon1{
+		color:blue;
+		margin-right:20px;
+	}
+	.icon2{
+		color:#cc0000;
+	}
 }
 
 
