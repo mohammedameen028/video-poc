@@ -8,6 +8,7 @@ import LargeBowls from "./cartimage/large-bowls-new.png";
 import BakingScooper from "./cartimage/measuring-cups-new.png";
 import Potatao from "./cartimage/potato-masher-new.png";
 import MuffinPan from "./cartimage/muffin-pan-new.png";
+import sharewindow from "./cartimage/sharewindow.png"
 import {FaShareSquare} from 'react-icons/fa'
 import {AiOutlineLike} from 'react-icons/ai'
 
@@ -15,6 +16,7 @@ import {AiOutlineLike} from 'react-icons/ai'
 
 
 import Modal from "./Modal";
+import ShareModal from './ShareModal';
 import Button from "react-bootstrap/Button";
 
 //then in the render function of Jsx insert the mainLogo variable
@@ -24,13 +26,26 @@ class ShopingCart extends React.PureComponent {
     super();
     this.state = {
       show: false,
+      showSharewindow: false,
       closeButton: false,
     };
     this.showModal = this.showModal.bind(this);
+    this.showShareModal = this.showShareModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
     this.handleClose = this.handleClose.bind(this);
   }
 
+
+  showShareModal =() =>{
+    console.log("hiiiiiii")
+    this.setState({showSharewindow:true})
+  }
+
+
+  hideShareModal =() =>{
+    this.setState({ showSharewindow: false });
+
+  }
   showModal = () => {
     this.setState({ show: true });
   };
@@ -87,7 +102,12 @@ class ShopingCart extends React.PureComponent {
                 &#10006;
               </span>
               <span >
-              <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                <div>
+                <ShareModal show={this.state.showSharewindow} handleClose={this.hideShareModal}>
+              <p>Modal</p>
+            </ShareModal>
+                </div>
+              <span className={styles["icon1"]} onClick={this.showShareModal}><FaShareSquare size={20}/></span>
               </span>
             </div>
             <div className={styles["cart-item"]}>
