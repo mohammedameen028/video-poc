@@ -56,37 +56,38 @@ class ShopingCart extends React.PureComponent {
 
   handleClose = () => {
     this.setState({ closeButton: !this.state.closeButton });
+  
   };
 
   render() {
     const { show } = this.state;
     console.log("show me", show);
 
-    this.state.closeButton && (setTimeout(function () {
+    !this.state.closeButton && (setTimeout(function () {
       document.getElementById("item1").style.display = "block";
     }, 10000))
 
-    this.state.closeButton && (setTimeout(function () {
+    !this.state.closeButton && (setTimeout(function () {
       document.getElementById("item2").style.display = "block";
     }, 20000))
 
-    this.state.closeButton && (setTimeout(function () {
+    !this.state.closeButton && (setTimeout(function () {
       document.getElementById("item3").style.display = "block";
     }, 30000))
 
-    this.state.closeButton && (setTimeout(function () {
+    !this.state.closeButton && (setTimeout(function () {
       document.getElementById("item4").style.display = "block";
     }, 40000))
 
-    this.state.closeButton && (setTimeout(function () {
+    !this.state.closeButton && (setTimeout(function () {
       document.getElementById("item5").style.display = "block";
     }, 50000))
 
-    this.state.closeButton && (setTimeout(function () {
+    !this.state.closeButton && (setTimeout(function () {
       document.getElementById("item6").style.display = "block";
     }, 60000))
 
-    this.state.closeButton && (setTimeout(function () {
+    !this.state.closeButton && (setTimeout(function () {
       document.getElementById("item7").style.display = "block";
     }, 70000))
 
