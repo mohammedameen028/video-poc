@@ -27,10 +27,10 @@ const handleProceed = (e) => {
 				</div> ) :''}
 				
 				{!state.proceed ? (<div className='cart'>
-					<img src={Store} alt="fireSpot" width="700" height="500" />
+					<img src={Store} alt="fireSpot" width="700" height="400" />
 				</div>) :
 				(<div className='cart'>
-				<img src={Cart} alt="fireSpot" width="700" height="500" />
+				<img src={Cart} alt="fireSpot" width="700" height="400" />
 			</div>)
 				}
 				{/* {children} */}
