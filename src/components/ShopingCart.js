@@ -113,21 +113,8 @@ class ShopingCart extends React.PureComponent {
             </div>
             <div className={styles["cart-item"]}>
               <div id="item1" className={styles["item1"]}>
-                <div>
-                <img
-                  src={coolingwire}
-                  alt="fireSpot"
-                  width="145"
-                  height="130"
-                />
-                </div>
-                <div>
-                <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
-                <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
+               
 
-                </div>
-              </div>
-              <div id="item2" className={styles["item2"]}>
                 <div>
                 <img
                   src={cupcakeliners}
@@ -137,6 +124,21 @@ class ShopingCart extends React.PureComponent {
                 />
                 </div>
                <div>
+                <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
+
+                </div>
+              </div>
+              <div id="item2" className={styles["item2"]}>
+              <div>
+                <img
+                  src={coolingwire}
+                  alt="fireSpot"
+                  width="145"
+                  height="130"
+                />
+                </div>
+                <div>
                 <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
                 <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
 
