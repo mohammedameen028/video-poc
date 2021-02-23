@@ -62,38 +62,38 @@ class ShopingCart extends React.PureComponent {
     const { show } = this.state;
     console.log("show me", show);
 
-    setTimeout(function () {
+    this.state.closeButton && (setTimeout(function () {
       document.getElementById("item1").style.display = "block";
-    }, 10000);
+    }, 10000))
 
-    setTimeout(function () {
+    this.state.closeButton && (setTimeout(function () {
       document.getElementById("item2").style.display = "block";
-    }, 20000);
+    }, 20000))
 
-    setTimeout(function () {
+    this.state.closeButton && (setTimeout(function () {
       document.getElementById("item3").style.display = "block";
-    }, 30000);
+    }, 30000))
 
-    setTimeout(function () {
+    this.state.closeButton && (setTimeout(function () {
       document.getElementById("item4").style.display = "block";
-    }, 40000);
+    }, 40000))
 
-    setTimeout(function () {
+    this.state.closeButton && (setTimeout(function () {
       document.getElementById("item5").style.display = "block";
-    }, 50000);
+    }, 50000))
 
-    setTimeout(function () {
+    this.state.closeButton && (setTimeout(function () {
       document.getElementById("item6").style.display = "block";
-    }, 60000);
+    }, 60000))
 
-    setTimeout(function () {
+    this.state.closeButton && (setTimeout(function () {
       document.getElementById("item7").style.display = "block";
-    }, 70000);
+    }, 70000))
 
     return (
-      <div className={styles["shopping-cart"]}>
+      <>
         {!this.state.closeButton ? (
-          <>
+          <div className={styles["shopping-cart"]}>
             <div className={styles["cart-header"]}>
               <span>
                 We have created your shopping whishlist from above video
@@ -214,16 +214,17 @@ class ShopingCart extends React.PureComponent {
                 Buy Now
               </Button>
             </div>
-          </>
-        ) : (
-          <div className={styles["cart-header"]}>
-            <span>Click here to create the dynamic shopping cart</span>{" "}
-            <span style={{ marginLeft: "30px" }} onClick={this.handleClose}>
-            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart--v1.png"/>
-            </span>
           </div>
-        )}
-      </div>
+        ) : null
+
+          // <div className={styles["cart-header"]}>
+          //   <span>Click here to create the dynamic shopping cart</span>{" "}
+          //   <span style={{ marginLeft: "30px" }} onClick={this.handleClose}>
+          //   <img src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart--v1.png"/>
+          //   </span>
+          // </div>
+       }
+      </>
     );
   }
 }
