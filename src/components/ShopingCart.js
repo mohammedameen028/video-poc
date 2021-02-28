@@ -28,6 +28,7 @@ class ShopingCart extends React.PureComponent {
       show: false,
       showSharewindow: false,
       closeButton: false,
+      timer: 10000
     };
     this.showModal = this.showModal.bind(this);
     this.showShareModal = this.showShareModal.bind(this);
@@ -59,38 +60,24 @@ class ShopingCart extends React.PureComponent {
   
   };
 
+  displayProductHandler = (item, timer) => {
+   return setTimeout(() => {
+     !this.state.closeButton && (document.getElementById(item).style.display = "block");
+    }, timer)
+  }
+
+  
+
   render() {
     const { show } = this.state;
     console.log("show me", show);
+    const products = {'item1': 10000, 'item2': 20000, 'item3':40000, 'item4':50000, 'item5':60000, 'item6':70000, 'item7':80000}
 
-    !this.state.closeButton && (setTimeout(function () {
-      document.getElementById("item1").style.display = "block";
-    }, 10000))
+    !this.state.closeButton && Object.entries(products).map(([item, timer], k) => {
+      this.displayProductHandler(item, timer)
 
-    !this.state.closeButton && (setTimeout(function () {
-      document.getElementById("item2").style.display = "block";
-    }, 20000))
-
-    !this.state.closeButton && (setTimeout(function () {
-      document.getElementById("item3").style.display = "block";
-    }, 30000))
-
-    !this.state.closeButton && (setTimeout(function () {
-      document.getElementById("item4").style.display = "block";
-    }, 40000))
-
-    !this.state.closeButton && (setTimeout(function () {
-      document.getElementById("item5").style.display = "block";
-    }, 50000))
-
-    !this.state.closeButton && (setTimeout(function () {
-      document.getElementById("item6").style.display = "block";
-    }, 60000))
-
-    !this.state.closeButton && (setTimeout(function () {
-      document.getElementById("item7").style.display = "block";
-    }, 70000))
-
+    })
+      
     return (
       <>
         {!this.state.closeButton ? (
