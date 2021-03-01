@@ -1,6 +1,8 @@
 import './modal.css';
 import React, { useState} from 'react'
 import Store from'./cartimage/cart-store-screen.png';
+import savedcart from "./cartimage/savedcart.png";
+
 import Cart from './cartimage/ss.jpg';
 import {TextField, Button} from "@material-ui/core";
 
@@ -30,7 +32,7 @@ const handleProceed = (e) => {
 					<img src={Store} alt="fireSpot" width="700" height="400" />
 				</div>) :
 				(<div className='cart'>
-				<img src={Cart} alt="fireSpot" width="700" height="400" />
+				<img src={Cart} alt="fireSpot" width="700" height="500" />
 			</div>)
 				}
 				{/* {children} */}

@@ -19,20 +19,20 @@ const handleProceed = (e) => {
 }
 	return (
 		<div className={showHideClassName}>
-			<section className="modal-main">
-				<div className="modal-header">Share</div>
+			<section className="modal-main-share">
+				<div className="modal-header-share">Share</div>
 				
-				{!state.proceed ? (<div className='cart'>
-					<img src={Share} alt="fireSpot" width="300" height="450" />
+				{!state.proceed ? (<div className='cart-share'>
+					<img src={Share} alt="fireSpot" width="350" height="480" />
 				</div>) :
-				(<div className='cart'>
+				(<div className='cart-share'>
 				<img src={Share} alt="fireSpot" width="300" height="400" />
 			</div>)
 				}
 				{/* {children} */}
 				<div style={{marginLeft:"14px", padding:"8px"}}>
 				
-					<span style={{marginLeft:"40px"}}>
+					<span style={{marginLeft:"20px"}}>
 					<Button variant="contained" color="secondary" onClick={handleClose} className="close">
 						Close
 					</Button>

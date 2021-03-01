@@ -198,7 +198,7 @@ class ShopingCart extends React.PureComponent {
             </Modal>
             <div className={styles["cart-footer"]}>
               <Button className={styles["button1"]} onClick={this.showModal}>
-                Save To Cart
+              Whishlist
               </Button>
               <Button className={styles["button2"]} onClick={this.showModal}>
                 Buy Now
