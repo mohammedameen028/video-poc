@@ -225,7 +225,7 @@ hideBowlModal =() =>{
             </Modal>
             <div className={styles["cart-footer"]}>
               <Button className={styles["button1"]} onClick={this.showModal}>
-              Whishlist
+              Save To Cart
               </Button>
               <Button className={styles["button2"]} onClick={this.showModal}>
                 Buy Now

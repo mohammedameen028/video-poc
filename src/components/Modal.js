@@ -32,11 +32,11 @@ const handleProceed = (e) => {
 					<img src={Store} alt="fireSpot" width="700" height="400" />
 				</div>) :
 				(<div className='cart'>
-				<img src={Cart} alt="fireSpot" width="700" height="500" />
+				<img src={Cart} alt="fireSpot" width="700" height="470" />
 			</div>)
 				}
 				{/* {children} */}
-				<div style={{marginLeft:"14px", padding:"8px"}}>
+				{!state.proceed? (<div style={{marginLeft:"14px", padding:"8px"}}>
 					<span>
 					<Button variant="contained" color="primary" onClick={(e) => {handleProceed(e)}}className="proceed">
 						proceed
@@ -47,7 +47,19 @@ const handleProceed = (e) => {
 						Close
 					</Button>
 					</span>
-				</div>
+				</div>):
+				(<div style={{marginLeft:"14px", padding:"8px"}}>
+				<span>
+				<Button variant="contained" color="primary" onClick={(e) => {handleProceed(e)}}className="proceednew">
+					Add to Walmart Cart
+				</Button>
+				</span>
+				<span style={{marginLeft:"40px"}}>
+				<Button variant="contained" color="secondary" onClick={handleClose} className="close">
+					Close
+				</Button>
+				</span>
+			</div>)}
 			</section>
 		</div>
 

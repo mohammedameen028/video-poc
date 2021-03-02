@@ -46,7 +46,7 @@
 	
 }
   .close{
-	height: 5%;
+	  height: 5%;
     width: 10%;
     position: relative;
 	  margin-left: 5px;
@@ -66,10 +66,10 @@
   }
 
   .proceed{
-	height: 5%;
+	 height: 5%;
     width: 10%;
     position: relative;
-	margin-left: 75%;
+	  margin-left: 75%;
     background: rgba(110, 189, 66, 0.8);
     border-radius: 7px;
     border: none;
@@ -84,6 +84,26 @@
     justify-content: center;
     color: #fff;
   
+  }
+  .proceednew{
+    height: 5%;
+    width: 30%;
+    position: relative;
+	  margin-left: 65%;
+    background: rgba(110, 189, 66, 0.8);
+    border-radius: 7px;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+
   }
   .display-block {
 	display: block;
