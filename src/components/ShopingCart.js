@@ -18,8 +18,10 @@ import {AiOutlineLike} from 'react-icons/ai'
 import Modal from "./Modal";
 import ShareModal from './ShareModal';
 import CoolingModal from './CoolingModal';
-import BowlModal from './BowlModal'
+import BowlModal from './BowlModal';
+import SaveModal from './SaveModal';
 import Button from "react-bootstrap/Button";
+
 
 //then in the render function of Jsx insert the mainLogo variable
 
@@ -32,9 +34,11 @@ class ShopingCart extends React.PureComponent {
       closeButton: false,
       timer: 10000,
       showCooling: false,
-      showBowl: false
+      showBowl: false,
+      showSave:false
     };
     this.showModal = this.showModal.bind(this);
+    this.showSaveModal = this.showSaveModal.bind(this);
     this.showShareModal = this.showShareModal.bind(this);
     this.showCoolingModal = this.showCoolingModal.bind(this);
     this.showBowlModal = this.showBowlModal.bind(this);
@@ -44,6 +48,13 @@ class ShopingCart extends React.PureComponent {
 
 showCoolingModal =() =>{
   this.setState({showCoolingModal:true})
+}
+showSaveModal =() =>{
+  this.setState({showSave:true})
+}
+
+hideSaveModal =() =>{
+  this.setState({showSave:false})
 }
 
 hideCoolingModal =() =>{
@@ -131,7 +142,7 @@ hideBowlModal =() =>{
                 />
                 </div>
                <div>
-                <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                <span className={styles["icon1"]} onClick={this.showShareModal}><FaShareSquare size={20}/></span>
                 <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
 
                 </div>
@@ -150,7 +161,7 @@ hideBowlModal =() =>{
                 />
                 </div>
                 <div>
-                <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                <span className={styles["icon1"]} onClick={this.showShareModal}><FaShareSquare size={20}/></span>
                 <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
 
                 </div>
@@ -165,7 +176,7 @@ hideBowlModal =() =>{
                 />
                 </div>
                 <div>
-                <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                <span className={styles["icon1"]} onClick={this.showShareModal}><FaShareSquare size={20}/></span>
                 <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
 
                 </div>
@@ -179,7 +190,7 @@ hideBowlModal =() =>{
                 <img src={LargeBowls} alt="fireSpot" width="145" height="130"  onClick={this.showBowlModal}/>
                 </div>
                 <div>
-                <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                <span className={styles["icon1"]} onClick={this.showShareModal}><FaShareSquare size={20}/></span>
                 <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
                 </div>
               </div>
@@ -188,7 +199,7 @@ hideBowlModal =() =>{
                 <img src={Potatao} alt="fireSpot" width="145" height="130" />
                 </div>
                 <div>
-                <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                <span className={styles["icon1"]} onClick={this.showShareModal}><FaShareSquare size={20}/></span>
                 <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
                 </div>
               </div>
@@ -203,7 +214,7 @@ hideBowlModal =() =>{
                 />
                    </div>
                    <div>
-                   <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                   <span className={styles["icon1"]} onClick={this.showShareModal}><FaShareSquare size={20}/></span>
                 <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
 
                    </div>
@@ -215,7 +226,7 @@ hideBowlModal =() =>{
                 <img src={MuffinPan} alt="fireSpot" width="145" height="130" />
                 </div>
                 <div>
-                <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
+                <span className={styles["icon1"]} onClick={this.showShareModal}><FaShareSquare size={20}/></span>
                 <span className={styles["icon2"]}><AiOutlineLike size={20}/></span>
                 </div>
               </div>
@@ -223,8 +234,11 @@ hideBowlModal =() =>{
             <Modal show={this.state.show} handleClose={this.hideModal}>
               <p>Modal</p>
             </Modal>
+            <SaveModal show={this.state.showSave} handleClose={this.hideSaveModal}>
+              <p>Modal</p>
+            </SaveModal>
             <div className={styles["cart-footer"]}>
-              <Button className={styles["button1"]} onClick={this.showModal}>
+              <Button className={styles["button1"]} onClick={this.showSaveModal}>
               Save To Cart
               </Button>
               <Button className={styles["button2"]} onClick={this.showModal}>
