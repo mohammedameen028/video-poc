@@ -17,6 +17,8 @@ import {AiOutlineLike} from 'react-icons/ai'
 
 import Modal from "./Modal";
 import ShareModal from './ShareModal';
+import CoolingModal from './CoolingModal';
+import BowlModal from './BowlModal'
 import Button from "react-bootstrap/Button";
 
 //then in the render function of Jsx insert the mainLogo variable
@@ -28,17 +30,35 @@ class ShopingCart extends React.PureComponent {
       show: false,
       showSharewindow: false,
       closeButton: false,
-      timer: 10000
+      timer: 10000,
+      showCooling: false,
+      showBowl: false
     };
     this.showModal = this.showModal.bind(this);
     this.showShareModal = this.showShareModal.bind(this);
+    this.showCoolingModal = this.showCoolingModal.bind(this);
+    this.showBowlModal = this.showBowlModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
     this.handleClose = this.handleClose.bind(this);
   }
 
+showCoolingModal =() =>{
+  this.setState({showCoolingModal:true})
+}
+
+hideCoolingModal =() =>{
+  this.setState({showCoolingModal:false})
+}
+
+showBowlModal =() =>{
+  this.setState({showBowl:true})
+}
+
+hideBowlModal =() =>{
+  this.setState({showBowl:false})
+}
 
   showShareModal =() =>{
-    console.log("hiiiiiii")
     this.setState({showSharewindow:true})
   }
 
@@ -118,7 +138,11 @@ class ShopingCart extends React.PureComponent {
               </div>
               <div id="item2" className={styles["item2"]}>
               <div>
+              <CoolingModal show={this.state.showCoolingModal} handleClose={this.hideCoolingModal}>
+              <p>Modal</p>
+            </CoolingModal>
                 <img
+                  onClick={this.showCoolingModal}
                   src={coolingwire}
                   alt="fireSpot"
                   width="145"
@@ -149,7 +173,10 @@ class ShopingCart extends React.PureComponent {
               </div>
               <div id="item4" className={styles["item4"]}>
                 <div>
-                <img src={LargeBowls} alt="fireSpot" width="145" height="130" />
+                <BowlModal show={this.state.showBowl} handleClose={this.hideBowlModal}>
+              <p>Modal</p>
+            </BowlModal>
+                <img src={LargeBowls} alt="fireSpot" width="145" height="130"  onClick={this.showBowlModal}/>
                 </div>
                 <div>
                 <span className={styles["icon1"]}><FaShareSquare size={20}/></span>
