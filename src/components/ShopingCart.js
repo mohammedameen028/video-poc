@@ -102,7 +102,7 @@ hideBowlModal =() =>{
   render() {
     const { show } = this.state;
     console.log("show me", show);
-    const products = {'item1': 10000, 'item2': 20000, 'item3':40000, 'item4':50000, 'item5':60000, 'item6':70000, 'item7':80000}
+    const products = {'item1': 15000, 'item2': 20000, 'item3':30000, 'item4':40000, 'item5':50000, 'item6':55000, 'item7':60000}
 
     !this.state.closeButton && Object.entries(products).map(([item, timer], k) => {
       this.displayProductHandler(item, timer)
